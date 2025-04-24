@@ -1,0 +1,96 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
+import Skills from "@/components/Skills.astro"
+import Certifications from "@/components/Certifications.astro"
+import Education from "@/components/Education.astro"
+import Achievements from "@/components/Achievements.astro"
+import References from "@/components/References.astro"
+---
+
+<Layout
+  title="Portfolio of Harsh Maheshwari - AI & ML Engineer"
+  description="AI & ML Engineer specializing in Computer Vision, NLP, and Generative AI."
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
+    </SectionContainer>
+    <div class="space-y-24">
+    <SectionContainer id="about">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        About Me
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Experience
+      </TitleSection>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Skills
+      </TitleSection>
+      <Skills />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Projects
+      </TitleSection>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="education">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Education
+      </TitleSection>
+      <Education />
+    </SectionContainer>
+
+    <SectionContainer id="certifications">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        Certifications
+      </TitleSection>
+      <Certifications />
+    </SectionContainer>
+
+    <SectionContainer id="achievements">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Achievements & Publications
+      </TitleSection>
+      <Achievements />
+    </SectionContainer>
+
+    <SectionContainer id="references">
+      <TitleSection>
+        <Briefcase class="size-8" />
+        References
+      </TitleSection>
+      <References />
+    </SectionContainer>
+  </div>
+  </main>
+</Layout>

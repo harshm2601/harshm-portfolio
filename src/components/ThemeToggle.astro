@@ -1,0 +1,196 @@
+---
+import SunIcon from "./icons/Sun.astro"
+import MoonIcon from "./icons/Moon.astro"
+
+const THEMES = ["Light", "Dark"]
+---
+
+<div class="relative ml-1 mr-1">
+  <button
+    transition:persist
+    id="theme-toggle-btn"
+    class="appearance-none border-none flex hover:scale-125 transition"
+  >
+    <span class="sr-only">Elige el tema</span>
+    <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
+    <MoonIcon
+      id="dark"
+      class="theme-toggle-icon absolute size-5 transition-all"
+    />
+  </button>
+  <div
+    transition:persist
+    id="themes-menu"
+    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+  >
+    <ul>
+      {
+        THEMES.map((theme) => (
+          <li class="themes-menu-option px-2 py-1.5 cursor-pointer hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
+            {theme}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div id="no-message" class="no-message hidden">
+    <div class="no-message-content p-6 bg-gray-700 text-white rounded-lg shadow-lg">
+      <p class="text-lg">No, el modo Light es para gente que quiere quedarse ciega 😠</p>
+      <button id="no-message-close" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">No lo volveré a hacer 😞</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #themes-menu.open {
+    display: inline;
+    animation: scale-up-center 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  @keyframes scale-up-center {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .no-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .no-message-content {
+    max-width: 400px;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    animation: pop-up 0.3s ease-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .no-message.hidden {
+    display: none;
+  }
+
+  .no-message.visible {
+    display: flex;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pop-up {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .no-message.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+</style>
+
+<script is:inline>
+  let remove = null
+  const matchMedia = window.matchMedia("(prefers-color-scheme: dark)")
+  const themesMenu = document.getElementById("themes-menu")
+  const noMessage = document.getElementById("no-message")
+  const noMessageClose = document.getElementById("no-message-close")
+
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined") {
+      return localStorage.getItem("theme") ?? "dark"
+    }
+
+    return matchMedia.matches ? "dark" : "light"
+  }
+
+  const updateIcon = (themePreference) => {
+    document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
+      element.style.scale = element.id === themePreference ? "1" : "0"
+    })
+  }
+
+  const updateTheme = () => {
+    if (remove != null) {
+      remove()
+    }
+    matchMedia.addEventListener("change", updateTheme)
+    remove = () => {
+      matchMedia.removeEventListener("change", updateTheme)
+    }
+
+    const themePreference = getThemePreference()
+    const isDark =
+      themePreference === "dark" ||
+      (themePreference === "system" && matchMedia.matches)
+
+    updateIcon(themePreference)
+
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+  }
+
+  updateTheme()
+
+  document.addEventListener("click", () => themesMenu.classList.remove("open"))
+
+  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
+    e.stopPropagation()
+    const isClosed = !themesMenu.classList.contains("open")
+    themesMenu.classList[isClosed ? "add" : "remove"]("open")
+  })
+
+  document.querySelectorAll(".themes-menu-option").forEach((option) => {
+    option.addEventListener("click", () => {
+      const selectedTheme = option.innerText.toLowerCase()
+
+      if (selectedTheme === "light") {
+        noMessage.classList.add("visible")
+      }
+    })
+  })
+
+  noMessageClose.addEventListener("click", () => {
+    noMessage.classList.add("fade-out")
+    setTimeout(() => {
+      noMessage.classList.remove("visible", "fade-out")
+    }, 300)
+  })
+</script>
