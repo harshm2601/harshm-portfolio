@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Trophy, Target, Calendar, TrendingUp, Code, Star } from 'lucide-react';
+import { ExternalLink, Trophy, Calendar, TrendingUp, Code, Star } from 'lucide-react';
 import Link from 'next/link';
 
 const LeetCodeSection = () => {
@@ -286,7 +286,7 @@ const LeetCodeSection = () => {
 
             <div className="mt-8 text-center">
               <p className="text-gray-600 mb-4">
-                My LeetCode journey represents more than just problem-solving—it's about developing 
+                My LeetCode journey represents more than just problem-solving—it&apos;s about developing 
                 analytical thinking, pattern recognition, and the persistence needed for complex AI challenges.
               </p>
               <Button asChild variant="outline" size="lg">

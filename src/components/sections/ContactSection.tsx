@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Send, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, ExternalLink, Send, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -99,7 +99,7 @@ const ContactSection = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Let's connect! I'm always interested in discussing AI, machine learning projects, 
+            Let&apos;s connect! I&apos;m always interested in discussing AI, machine learning projects, 
             collaboration opportunities, or just having a great conversation about technology.
           </p>
         </motion.div>
@@ -162,7 +162,7 @@ const ContactSection = () => {
                     type="text"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    placeholder="What's this about?"
+                    placeholder="What&apos;s this about?"
                     className="w-full"
                   />
                 </div>
@@ -304,11 +304,11 @@ const ContactSection = () => {
           className="text-center mt-16"
         >
           <Card className="p-8 bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Let's Build Something Amazing Together!</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">Let&apos;s Build Something Amazing Together!</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Whether you're looking for an AI engineer, want to collaborate on a project, 
+              Whether you&apos;re looking for an AI engineer, want to collaborate on a project, 
               or just want to chat about the latest in machine learning and technology, 
-              I'd love to hear from you.
+              I&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">

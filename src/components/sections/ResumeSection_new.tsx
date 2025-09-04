@@ -74,7 +74,12 @@ const ResumeSection = () => {
                 title="Harsh Maheshwari Resume"
                 style={{ minHeight: '800px' }}
               >
-                Your browser does not support PDFs. Please download the PDF to view it.
+                <p>
+                  Your browser does not support PDFs. 
+                  <Link href="/resume.pdf" target="_blank" className="text-blue-600 hover:underline">
+                    Click here to download the PDF
+                  </Link>
+                </p>
               </iframe>
             </div>
           </Card>

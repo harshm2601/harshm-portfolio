@@ -2,9 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowDown, Download, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 const HeroSection = () => {
@@ -38,9 +37,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative mx-auto w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl"
           >
-            <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-6xl font-bold">
-              HM
-            </div>
+            <Image
+              src="/harsh.png"
+              alt="Harsh Maheshwari"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 192px, 192px"
+            />
           </motion.div>
 
           {/* Main Heading */}

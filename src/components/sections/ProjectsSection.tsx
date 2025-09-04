@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Globe, Star, GitFork } from 'lucide-react';
+import { ExternalLink, Github, Globe, Star } from 'lucide-react';
 import Link from 'next/link';
 
 const ProjectsSection = () => {

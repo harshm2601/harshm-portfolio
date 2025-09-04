@@ -3,8 +3,7 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { Calendar, MapPin, Award, BookOpen, Users, Target, Briefcase } from 'lucide-react';
+import { Calendar, MapPin, Award, BookOpen, Users, Target, Trophy } from 'lucide-react';
 import Image from 'next/image';
 
 const AboutSection = () => {
@@ -35,12 +34,12 @@ const AboutSection = () => {
     {
       title: "Research Publication",
       icon: BookOpen,
-      description: "Published paper on 'Enhancing Human Detection and Counting Efficiency Through Deep Learning' at ICRAIC 2024"
+      description: "Published paper on &apos;Enhancing Human Detection and Counting Efficiency Through Deep Learning&apos; at ICRAIC 2024"
     },
     {
       title: "Invited Speaker",
       icon: Users,
-      description: "Delivered 'AI Frontiers: Unlocking the Future with RAG, GANs & YOLO' to 150+ students at CHARUSAT"
+      description: "Delivered &apos;AI Frontiers: Unlocking the Future with RAG, GANs & YOLO&apos; to 150+ students at CHARUSAT"
     },
     {
       title: "Competitive Programming",
@@ -96,9 +95,13 @@ const AboutSection = () => {
             <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-xl">
               <div className="text-center space-y-6">
                 <div className="relative mx-auto w-64 h-64 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-8xl font-bold">
-                    HM
-                  </div>
+                  <Image
+                    src="/harsh.png"
+                    alt="Harsh Maheshwari"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 256px, 256px"
+                  />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-gray-800">Harsh Maheshwari</h3>
@@ -126,13 +129,13 @@ const AboutSection = () => {
             <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-xl">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Professional Journey</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                I'm a passionate AI Engineer currently working at Lumeo in San Francisco, where I build cutting-edge 
+                I&apos;m a passionate AI Engineer currently working at Lumeo in San Francisco, where I build cutting-edge 
                 computer vision and machine learning solutions. My journey in AI began during my B.Tech in Artificial 
-                Intelligence & Machine Learning at CHARUSAT, where I've maintained a stellar 9.12 CGPA.
+                Intelligence & Machine Learning at CHARUSAT, where I&apos;ve maintained a stellar 9.12 CGPA.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 My expertise spans across Computer Vision, Natural Language Processing, Generative AI, and MLOps. 
-                I've published research papers, delivered technical talks to 150+ students, and consistently ranked 
+                I&apos;ve published research papers, delivered technical talks to 150+ students, and consistently ranked 
                 in top percentiles in national competitions. With 750+ LeetCode problems solved and a 500-day streak, 
                 I combine strong algorithmic thinking with practical AI implementation skills.
               </p>
