@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Globe, Star } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ProjectsSection = () => {
   const featuredProject = {
@@ -15,9 +16,9 @@ const ProjectsSection = () => {
     stack: ["Python", "Streamlit", "Crew.ai", "LangChain", "Vision Transformer", "AI Agents"],
     link: "https://swasthify-r4qy.vercel.app/",
     github: "https://github.com/harshm2601/Swasthify",
-    image: "/images/swasthify-preview.jpg",
+    image: "/swasthify.png", // Add swasthify.png to public folder
     featured: true,
-    status: "🚀 Live & Featured"
+    // status: "🚀 Live & Featured"
   };
 
   const projects = [
@@ -146,15 +147,14 @@ const ProjectsSection = () => {
           <Card className="overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Project Image/Demo */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center min-h-[300px]">
-                <div className="text-center text-white p-8">
-                  <div className="text-6xl mb-4">🏥</div>
-                  <h3 className="text-2xl font-bold mb-2">Swasthify</h3>
-                  <p className="text-blue-100">Smart Health Tracking Platform</p>
-                  <Badge className="mt-4 bg-white/20 text-white border-white/30">
-                    {featuredProject.status}
-                  </Badge>
-                </div>
+              <div className="relative overflow-hidden bg-gray-100 flex items-center justify-center min-h-[400px]">
+                <Image
+                  src="/swasthify.png"
+                  alt="Swasthify App Screenshot"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
 
               {/* Project Details */}

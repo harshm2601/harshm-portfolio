@@ -94,12 +94,12 @@ const AboutSection = () => {
           >
             <Card className="p-6 bg-white/80 backdrop-blur-sm border-0 shadow-xl">
               <div className="text-center space-y-6">
-                <div className="relative mx-auto w-64 h-64 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
+                <div className="relative mx-auto w-64 h-80 rounded-2xl overflow-hidden border-4 border-white shadow-2xl">
                   <Image
                     src="/harsh.png"
                     alt="Harsh Maheshwari"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 768px) 256px, 256px"
                   />
                 </div>

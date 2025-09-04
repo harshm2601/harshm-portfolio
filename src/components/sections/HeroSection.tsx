@@ -29,21 +29,21 @@ const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center space-y-8">
+        <div className="text-center space-y-8 mt-12">
           {/* Profile Image */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mx-auto w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl"
+            className="relative mx-auto w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-2xl"
           >
             <Image
               src="/harsh.png"
               alt="Harsh Maheshwari"
               fill
-              className="object-cover"
+              className="object-cover object-[center_20%] scale-110"
               priority
-              sizes="(max-width: 768px) 192px, 192px"
+              sizes="(max-width: 768px) 208px, 208px"
             />
           </motion.div>
 
