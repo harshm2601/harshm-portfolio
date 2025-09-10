@@ -2,10 +2,6 @@
 
 A beautiful, modern portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and shadcn/ui components, showcasing my journey as an AI Engineer and Machine Learning enthusiast.
 
-## 🚀 Live Demo
-
-The portfolio is now running at [http://localhost:3000](http://localhost:3000)
-
 ## ✨ Features
 
 ### 🎨 Design & User Experience
