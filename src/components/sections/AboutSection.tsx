@@ -129,13 +129,13 @@ const AboutSection = () => {
             <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-xl">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Professional Journey</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                I'm a passionate AI Engineer currently working at Lumeo in San Francisco, where I build cutting-edge 
+                I&apos;m a passionate AI Engineer currently working at Lumeo in San Francisco, where I build cutting-edge 
                 computer vision and machine learning solutions. My journey in AI began during my B.Tech in Artificial 
-                Intelligence & Machine Learning at CHARUSAT, where I've maintained a stellar 9.12 CGPA.
+                Intelligence & Machine Learning at CHARUSAT, where I&apos;ve maintained a stellar 9.12 CGPA.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 My expertise spans across Computer Vision, Natural Language Processing, Generative AI, and MLOps. 
-                I've published research papers, delivered technical talks to 150+ students, and consistently ranked 
+                I&apos;ve published research papers, delivered technical talks to 150+ students, and consistently ranked 
                 in top percentiles in national competitions. With 750+ LeetCode problems solved and a 500-day streak, 
                 I combine strong algorithmic thinking with practical AI implementation skills.
               </p>
