@@ -8,18 +8,22 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   const technologies = [
-    { name: 'Python', logo: '🐍' },
-    { name: 'TensorFlow', logo: '🧠' },
-    { name: 'PyTorch', logo: '🔥' },
-    { name: 'Next.js', logo: '⚛️' },
-    { name: 'Docker', logo: '🐳' },
-    { name: 'JavaScript', logo: '💛' },
-    { name: 'Computer Vision', logo: '👁️' },
-    { name: 'NLP', logo: '💬' },
-    { name: 'LangChain', logo: '🔗' },
-    { name: 'Hugging Face', logo: '🤗' },
-    { name: 'SQL', logo: '🗄️' },
-    { name: 'C/C++', logo: '⚡' },
+    { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+    { name: 'PyTorch', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+    // { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+    { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    // { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    // { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+    { name: 'LangChain', icon: 'https://avatars.githubusercontent.com/u/126733545?s=200&v=4' },
+    { name: 'Crew.ai', icon: 'https://avatars.githubusercontent.com/u/170677839?s=200&v=4' },
+    { name: 'Hugging Face', icon: 'https://huggingface.co/favicon.ico' },
+    { name: 'OpenAI', icon: 'https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png' },
+    // { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+    { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+    { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+    { name: 'C++', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
   ];
 
   const scrollToAbout = () => {
@@ -130,7 +134,7 @@ const HeroSection = () => {
                     variant="secondary" 
                     className="px-4 py-2 text-sm font-medium bg-white border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 cursor-pointer"
                   >
-                    <span className="mr-2 text-lg">{tech.logo}</span>
+                    <img src={tech.icon} alt={tech.name} className="w-5 h-5 mr-2" />
                     {tech.name}
                   </Badge>
                 </motion.div>
