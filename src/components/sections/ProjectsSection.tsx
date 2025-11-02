@@ -14,7 +14,7 @@ const ProjectsSection = () => {
     description: "A comprehensive smart health tracker that analyzes daily meals through text and image inputs to provide detailed calorie breakdowns, nutrient insights, and personalized food and exercise recommendations.",
     longDescription: "Built using advanced AI technologies including Vision Transformers and AI agent-based pipelines, Swasthify automates food recognition and generates real-time, personalized health plans. The application leverages Crew.ai for multi-agent coordination and LangChain for intelligent data processing.",
     stack: ["Python", "Streamlit", "Crew.ai", "LangChain", "Vision Transformer", "AI Agents"],
-    link: "https://swasthify-r4qy.vercel.app/",
+    link: "https://swasthify.tech/",
     github: "https://github.com/harshm2601/Swasthify",
     image: "/swasthify.png", // Add swasthify.png to public folder
     featured: true,
