@@ -14,8 +14,9 @@ const AboutSection = () => {
       location: "San Francisco, USA",
       dates: "May 2025 – Present",
       achievements: [
-        "Engineered end-to-end, MLOps-driven AI pipelines from data curation to scalable deployment using Zero-shot detection and Vision Language Models.",
-        "Designed and deployed advanced computer vision and deep learning models, integrating autonomous AI agents for real-time, production-grade performance."
+        "Built and deployed computer vision solutions including PPE/OSHA violation identification, weapon and emergency vehicle detection, airport unfamiliar object detection, and violence detection for real-world surveillance use cases.",
+        "Developed a Re-Identification (ReID) pipeline and implemented person attribute classification (top/bottom color and clothing type) to enhance multi-camera tracking and analytics.",
+        "Evaluated and benchmarked zero-shot and open-vocabulary detection models, conducted R&D on visual exemplar-based prompting for zero-shot detection, and experimented with open-vocab action recognition frameworks."
       ]
     },
     {
